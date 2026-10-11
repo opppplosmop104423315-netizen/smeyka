@@ -200,16 +200,16 @@ def game_loop():
         draw_missing_texture_corner(SCREEN_WIDTH - corner_w, SCREEN_HEIGHT - corner_h, corner_w, corner_h)
 
         for wall in walls:
-            draw_fake_window(wall[0], wall[1], BLOCK_SIZE - 2, BLOCK_SIZE - 2, COLOR_WALL_HEADER, "wall.exe")
+            draw_fake_window(wall[0], wall[1], BLOCK_SIZE - 2, BLOCK_SIZE - 2, COLOR_WALL_HEADER, "стена.exe")
 
         for food in foods:
-            draw_fake_window(food[0], food[1], BLOCK_SIZE - 2, BLOCK_SIZE - 2, COLOR_APPLE_HEADER, "apple.exe")
+            draw_fake_window(food[0], food[1], BLOCK_SIZE - 2, BLOCK_SIZE - 2, COLOR_APPLE_HEADER, "яблоко.exe")
 
         for index, block in enumerate(snake_body):
             if index == 0:
-                draw_fake_window(block[0], block[1], BLOCK_SIZE - 2, BLOCK_SIZE - 2, COLOR_SNAKE_HEADER, "head.exe")
+                draw_fake_window(block[0], block[1], BLOCK_SIZE - 2, BLOCK_SIZE - 2, COLOR_SNAKE_HEADER, "голова.exe")
             else:
-                draw_fake_window(block[0], block[1], BLOCK_SIZE - 2, BLOCK_SIZE - 2, COLOR_WIN_HEADER, "body.exe")
+                draw_fake_window(block[0], block[1], BLOCK_SIZE - 2, BLOCK_SIZE - 2, COLOR_WIN_HEADER, "тело.exe")
 
         for glitch in glitches:
             gx, gy, gw, gh, _, _ = glitch
